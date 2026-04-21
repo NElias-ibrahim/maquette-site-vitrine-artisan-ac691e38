@@ -18,9 +18,9 @@ const Prix = () => {
             Nos <span className="italic-accent">prix.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-foreground/70 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Une grille tarifaire claire et transparente. Les prix peuvent varier
-            légèrement selon la longueur et la densité de vos cheveux. Un diagnostic
-            est toujours offert avant chaque prestation.
+            Les tarifs ci-dessous sont indicatifs. Le prix peut bouger un peu
+            selon la longueur et l'épaisseur de vos cheveux. On vous fait toujours
+            un point avant de commencer, sans surprise.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ const Prix = () => {
             Une <span className="italic-accent">question</span> sur un tarif ?
           </h2>
           <p className="text-cream/70 mb-10 max-w-xl mx-auto">
-            Appelez-nous, nous vous établirons un devis personnalisé selon vos cheveux et vos envies.
+            Appelez-nous, on vous répond et on vous fait une estimation selon vos cheveux.
           </p>
           <Link
             to="/contact"

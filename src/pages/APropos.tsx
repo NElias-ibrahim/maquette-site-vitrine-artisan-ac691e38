@@ -86,10 +86,10 @@ const APropos = () => {
       {/* VALEURS */}
       <section className="py-24 bg-ink text-cream">
         <div className="container-najma">
-          <p className="eyebrow text-cream/50 mb-6 text-center">Nos valeurs</p>
+          <p className="eyebrow text-cream/50 mb-6 text-center">Ce qui compte pour nous</p>
           <h2 className="font-serif font-light text-5xl md:text-6xl leading-tight text-center mb-20">
-            Trois <span className="italic-accent">engagements,</span><br />
-            une seule <span className="italic-accent">obsession.</span>
+            Trois <span className="italic-accent">choses</span><br />
+            simples.
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -118,8 +118,8 @@ const APropos = () => {
 
           <blockquote className="max-w-4xl mx-auto text-center">
             <p className="font-serif font-light text-4xl md:text-5xl leading-tight italic">
-              « Un beau cheveu, c'est avant tout un cheveu en bonne santé.
-              C'est notre première mission. »
+              « Un cheveu en bonne santé, ça passe avant tout le reste.
+              Le reste vient après. »
             </p>
             <footer className="mt-8 eyebrow">— L'équipe Najma</footer>
           </blockquote>

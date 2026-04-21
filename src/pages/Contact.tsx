@@ -20,10 +20,10 @@ const Contact = () => {
       {/* HERO */}
       <section className="pt-40 pb-16 bg-cream">
         <div className="container-najma">
-          <p className="eyebrow mb-6">Nous écrire, nous trouver</p>
+          <p className="eyebrow mb-6">Nous appeler, nous trouver</p>
           <h1 className="display-xl text-ink">
-            Prenons<br />
-            <span className="italic-accent">contact.</span>
+            On vous<br />
+            <span className="italic-accent">attend.</span>
           </h1>
         </div>
       </section>

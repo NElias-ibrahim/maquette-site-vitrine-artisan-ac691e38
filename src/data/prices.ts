@@ -1,8 +1,9 @@
 /* ============================================================
    GRILLE DE PRIX NAJMA COIFFURE
-   Prix indicatifs basés sur les standards de salons en région
-   parisienne avec spécialité coloration.
-   ⚠️ À ajuster avec les VRAIS prix du salon.
+   Tarifs relevés sur la vitrine du salon (110 Bd Michelet,
+   Noisy-le-Sec). Prix "à partir de" — TTC.
+   ⚠️ Pour ajouter/modifier un service : éditer le tableau
+   `items` de la catégorie correspondante ci-dessous.
    ============================================================ */
 
 export type PriceItem = {
@@ -19,52 +20,61 @@ export type PriceCategory = {
 };
 
 export const priceCategories: PriceCategory[] = [
+  /* ---------- SIGNATURES (mises en avant en vitrine) ---------- */
+  {
+    id: "signatures",
+    title: "Les incontournables",
+    subtitle: "Les tarifs phares affichés en vitrine",
+    items: [
+      { name: "Coupe + shampoing + brushing", price: "à partir de 13 €" },
+      { name: "Couleur", price: "à partir de 25 €" },
+      { name: "Mèche", price: "à partir de 30 €" },
+      { name: "Couleur + mèches", price: "à partir de 50 €" },
+      { name: "Lissage brésilien", price: "à partir de 60 €", description: "Selon longueur et densité" },
+    ],
+  },
+  /* ---------- FEMMES ---------- */
   {
     id: "femmes",
     title: "Femmes",
     subtitle: "Coupes, brushings et mises en beauté",
     items: [
-      { name: "Coupe + brushing", price: "35 €", description: "Shampoing, coupe et brushing" },
-      { name: "Brushing seul", price: "22 €", description: "Selon longueur" },
-      { name: "Coupe enfant fille (-12 ans)", price: "18 €" },
-      { name: "Chignon / coiffure événement", price: "à partir de 55 €", description: "Mariage, soirée" },
-      { name: "Lissage permanent", price: "à partir de 120 €", description: "Selon longueur et densité" },
+      { name: "Coupe + shampoing + brushing", price: "à partir de 13 €" },
+      { name: "Brushing seul", price: "à partir de 10 €", description: "Selon longueur" },
+      { name: "Chignon / coiffure événement", price: "sur devis", description: "Mariage, soirée, henné" },
     ],
   },
+  /* ---------- HOMMES ---------- */
   {
     id: "hommes",
     title: "Hommes",
     subtitle: "Coupes classiques et tendance",
     items: [
-      { name: "Coupe homme", price: "20 €", description: "Shampoing inclus" },
-      { name: "Coupe + barbe", price: "28 €" },
-      { name: "Taille de barbe", price: "12 €" },
-      { name: "Coupe enfant garçon (-12 ans)", price: "15 €" },
-      { name: "Coupe + couleur naturelle", price: "à partir de 45 €" },
+      { name: "Coupe homme", price: "à partir de 13 €", description: "Shampoing inclus" },
+      { name: "Coupe + barbe", price: "sur devis" },
+      { name: "Coupe enfant", price: "à partir de 10 €" },
     ],
   },
+  /* ---------- COULEUR (spécialité du salon) ---------- */
   {
     id: "couleur",
     title: "Couleur & Coloration",
-    subtitle: "Notre spécialité — soin et expertise",
+    subtitle: "La spécialité de Najma Coiffure",
     items: [
-      { name: "Couleur racines", price: "à partir de 40 €" },
-      { name: "Couleur complète", price: "à partir de 55 €", description: "Sur cheveux longs : +10 €" },
-      { name: "Balayage classique", price: "à partir de 75 €" },
-      { name: "Balayage californien", price: "à partir de 95 €" },
-      { name: "Mèches complètes", price: "à partir de 80 €" },
-      { name: "Patine / gloss", price: "à partir de 30 €", description: "Raviveur de couleur" },
+      { name: "Couleur", price: "à partir de 25 €" },
+      { name: "Mèche", price: "à partir de 30 €" },
+      { name: "Couleur + mèches", price: "à partir de 50 €" },
+      { name: "Balayage", price: "sur devis", description: "Selon technique et longueur" },
     ],
   },
+  /* ---------- LISSAGE & SOINS ---------- */
   {
     id: "soins",
-    title: "Soins capillaires",
-    subtitle: "Pour des cheveux en pleine santé",
+    title: "Lissage & Soins",
+    subtitle: "Pour des cheveux disciplinés et en bonne santé",
     items: [
-      { name: "Soin profond Olaplex", price: "25 €", description: "Réparation des fibres" },
-      { name: "Masque hydratant premium", price: "18 €" },
-      { name: "Soin botox capillaire", price: "à partir de 60 €" },
-      { name: "Diagnostic capillaire offert", price: "Gratuit", description: "Sur rendez-vous" },
+      { name: "Lissage brésilien", price: "à partir de 60 €", description: "Selon longueur et densité" },
+      { name: "Soin profond", price: "sur devis", description: "Masque réparateur en complément" },
     ],
   },
 ];

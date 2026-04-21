@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Star, ChevronDown } from "lucide-react";
-import { reviews } from "@/data/reviews";
+import { reviews, reviewsStats } from "@/data/reviews";
 import { salonInfo } from "@/data/salon";
 
 /* ============================================================
@@ -22,8 +22,9 @@ const Avis = () => {
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
 
-  // Statistiques (calculées dynamiquement)
-  const avgRating = (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1);
+  // Statistiques : note Google officielle (cf. reviewsStats dans src/data/reviews.ts)
+  const avgRating = reviewsStats.averageRating.toFixed(1);
+  const totalReviews = reviewsStats.totalReviews;
   const distribution = [5, 4, 3, 2, 1].map((star) => ({
     star,
     count: reviews.filter((r) => r.rating === star).length,
@@ -53,7 +54,7 @@ const Avis = () => {
                 ))}
               </div>
               <p className="text-muted-foreground">
-                Basé sur <strong className="text-foreground">{reviews.length} avis</strong> · Mis à jour régulièrement
+                Basé sur <strong className="text-foreground">{totalReviews} avis Google</strong> · {reviews.length} affichés
               </p>
             </div>
 

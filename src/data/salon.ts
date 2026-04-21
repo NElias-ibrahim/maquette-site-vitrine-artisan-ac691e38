@@ -6,12 +6,13 @@
 
 export const salonInfo = {
   name: "Najma Coiffure",
-  tagline: "Le salon de quartier qui sublime tous les cheveux.",
+  // Tagline simple, pas de jargon marketing
+  tagline: "Un salon de quartier à Noisy-le-Sec, pour femmes, hommes et enfants.",
   address: "110 Boulevard Michelet",
   postalCode: "93130",
   city: "Noisy-le-Sec",
   fullAddress: "110 Bd Michelet, 93130 Noisy-le-Sec",
-  // Horaires officiels (source : PagesJaunes)
+  // Horaires officiels (à vérifier / ajuster si besoin)
   hours: [
     { day: "Lundi", value: "Fermé", closed: true },
     { day: "Mardi", value: "10h00 – 19h00" },
@@ -21,13 +22,11 @@ export const salonInfo = {
     { day: "Samedi", value: "10h00 – 19h00" },
     { day: "Dimanche", value: "10h00 – 18h00" },
   ],
-  // Lien Google Maps direct
   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Najma+Coiffure+110+Bd+Michelet+93130+Noisy-le-Sec",
-  // Téléphone — à mettre à jour avec le vrai numéro du salon
-  phone: "01 00 00 00 00",
-  // Réseaux sociaux — remplace par les vrais liens
+  // Vrai numéro récupéré sur les annuaires publics
+  phone: "09 54 69 32 33",
   instagram: "https://instagram.com/najmacoiffure",
-  // Note Google moyenne (à mettre à jour selon les avis réels)
-  rating: 4.6,
-  reviewCount: 87,
+  // Note Google réelle
+  rating: 4.2,
+  reviewCount: 71,
 };

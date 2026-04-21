@@ -12,18 +12,18 @@ import { Link } from "react-router-dom";
 const valeurs = [
   {
     num: "01",
-    title: "L'écoute avant tout",
-    text: "Chaque rendez-vous commence par un diagnostic et un échange. Vos cheveux, votre style, vos envies — c'est là que tout commence.",
+    title: "On écoute",
+    text: "On commence toujours par discuter : ce que vous voulez, ce qui vous plaît, ce qui vous va. Pas de coupe imposée.",
   },
   {
     num: "02",
-    title: "Tous les cheveux, tous bienvenus",
-    text: "Lisses, bouclés, frisés, crépus, fins ou épais : nos coiffeurs sont formés à toutes les textures et tous les styles.",
+    title: "Tous les cheveux",
+    text: "Lisses, bouclés, frisés, crépus, fins, épais : on sait faire. Femmes, hommes, enfants, tout le monde est bienvenu.",
   },
   {
     num: "03",
-    title: "Des produits respectueux",
-    text: "Nous travaillons avec des marques engagées sur la qualité et la santé du cheveu : L'Oréal Pro, Olaplex, Kérastase.",
+    title: "Des bons produits",
+    text: "On utilise des marques sérieuses (L'Oréal Pro, Olaplex, Kérastase) pour préserver la santé de vos cheveux.",
   },
 ];
 
@@ -36,15 +36,15 @@ const APropos = () => {
           <div className="md:col-span-7">
             <p className="eyebrow mb-6">Notre histoire</p>
             <h1 className="display-xl text-ink">
-              Un salon<br />
-              à <span className="italic-accent">votre image.</span>
+              Le salon,<br />
+              en <span className="italic-accent">deux mots.</span>
             </h1>
           </div>
           <div className="md:col-span-5">
             <p className="text-lg text-foreground/75 leading-relaxed">
-              Depuis sa création en 2016, Najma Coiffure est devenu un repère
-              à Noisy-le-Sec. Un salon où l'on prend le temps, où l'on conseille,
-              où l'on accompagne chaque client vers la version la plus belle de lui-même.
+              Najma Coiffure, c'est un salon de quartier à Noisy-le-Sec.
+              Une équipe sympa, à l'écoute, qui prend le temps de bien faire
+              les choses. Pas de chichi, juste du bon travail.
             </p>
           </div>
         </div>
@@ -66,19 +66,18 @@ const APropos = () => {
           <div className="md:col-span-7 md:pl-12">
             <p className="eyebrow mb-4">L'esprit du salon</p>
             <h2 className="font-serif font-light text-4xl md:text-5xl leading-tight mb-8">
-              Un savoir-faire <span className="italic-accent">artisanal,</span><br />
-              une ambiance <span className="italic-accent">familiale.</span>
+              Simple, <span className="italic-accent">sympa,</span><br />
+              et <span className="italic-accent">pro.</span>
             </h2>
             <p className="text-foreground/75 text-lg leading-relaxed mb-5">
-              Chez Najma, on ne fait pas que couper les cheveux. On crée des moments.
-              Un café à l'arrivée, des conseils sincères, un savoir-faire technique
-              transmis depuis des années — voilà ce qui nous anime au quotidien.
+              Chez Najma, on aime ce qu'on fait. On vous accueille bien, on discute,
+              on conseille. Et surtout, on fait la coupe ou la couleur que vous voulez,
+              pas celle qu'on a envie de faire.
             </p>
             <p className="text-foreground/75 text-lg leading-relaxed">
-              Notre spécialité reste la <strong>coloration</strong>, dans toutes ses
-              déclinaisons : balayages, mèches, couleurs naturelles ou audacieuses.
-              Mais on aime tout autant transformer une coupe d'homme en quelques coups
-              de ciseaux ou apprivoiser des boucles indomptables.
+              Notre truc, c'est la <strong>coloration</strong> : balayages, mèches,
+              couleurs naturelles ou plus marquées. Mais on est aussi à l'aise sur
+              une coupe homme rapide ou pour dompter des boucles compliquées.
             </p>
           </div>
         </div>
@@ -87,10 +86,10 @@ const APropos = () => {
       {/* VALEURS */}
       <section className="py-24 bg-ink text-cream">
         <div className="container-najma">
-          <p className="eyebrow text-cream/50 mb-6 text-center">Nos valeurs</p>
+          <p className="eyebrow text-cream/50 mb-6 text-center">Ce qui compte pour nous</p>
           <h2 className="font-serif font-light text-5xl md:text-6xl leading-tight text-center mb-20">
-            Trois <span className="italic-accent">engagements,</span><br />
-            une seule <span className="italic-accent">obsession.</span>
+            Trois <span className="italic-accent">choses</span><br />
+            simples.
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -119,8 +118,8 @@ const APropos = () => {
 
           <blockquote className="max-w-4xl mx-auto text-center">
             <p className="font-serif font-light text-4xl md:text-5xl leading-tight italic">
-              « Un beau cheveu, c'est avant tout un cheveu en bonne santé.
-              C'est notre première mission. »
+              « Un cheveu en bonne santé, ça passe avant tout le reste.
+              Le reste vient après. »
             </p>
             <footer className="mt-8 eyebrow">— L'équipe Najma</footer>
           </blockquote>

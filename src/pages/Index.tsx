@@ -168,7 +168,7 @@ const Index = () => {
                 <img src={gallery2} alt="Coupe homme moderne" loading="lazy" width={900} height={1200}
                   className="w-full h-[290px] object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur px-4 py-1.5 rounded-full text-xs uppercase tracking-widest">
-                  Homme
+                  couleur & mèches
                 </div>
               </div>
               <div className="relative group overflow-hidden rounded-2xl">

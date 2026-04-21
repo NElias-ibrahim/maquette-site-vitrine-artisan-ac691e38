@@ -24,7 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Routes>
           {/* Routes principales avec layout commun */}
           <Route element={<Layout />}>

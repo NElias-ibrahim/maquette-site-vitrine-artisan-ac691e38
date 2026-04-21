@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +9,6 @@
    Style éditorial chaleureux : terracotta, crème, marron profond.
    Pour modifier les couleurs du site, change ces variables HSL.
    ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {

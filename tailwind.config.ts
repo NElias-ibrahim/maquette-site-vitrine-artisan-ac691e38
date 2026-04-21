@@ -13,7 +13,27 @@ export default {
       },
     },
     extend: {
+      // Polices custom — font-serif=Fraunces (titres), font-sans=Outfit (corps)
+      fontFamily: {
+        serif: ['Fraunces', 'Times New Roman', 'serif'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-cream': 'var(--gradient-cream)',
+        'gradient-sunset': 'var(--gradient-sunset)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'warm': 'var(--shadow-warm)',
+        'card': 'var(--shadow-card)',
+      },
       colors: {
+        // Tokens custom Najma
+        ink: "hsl(var(--ink))",
+        cream: "hsl(var(--cream))",
+        sage: "hsl(var(--sage))",
+        "terracotta-light": "hsl(var(--terracotta-light))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -3,11 +3,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Layout } from "@/components/Layout";
 import Index from "./pages/Index.tsx";
+import Prix from "./pages/Prix.tsx";
+import Avis from "./pages/Avis.tsx";
+import APropos from "./pages/APropos.tsx";
+import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
+/* ============================================================
+   ROUTING — Najma Coiffure
+   Toutes les pages sont enveloppées dans <Layout/> qui inclut
+   la nav et le footer. Pour ajouter une page : créer le fichier
+   dans /pages, ajouter une route ici et un lien dans Navigation.
+   ============================================================ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -15,8 +26,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Routes principales avec layout commun */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<Index />} />
+            <Route path="/prix" element={<Prix />} />
+            <Route path="/avis" element={<Avis />} />
+            <Route path="/a-propos" element={<APropos />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+          {/* Route 404 (catch-all, doit rester en dernier) */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

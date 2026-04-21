@@ -51,18 +51,18 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Titre éditorial gigantesque */}
+          {/* Titre simple et direct */}
           <h1 className="display-xl text-ink max-w-5xl animate-fade-up">
-            L'art de sublimer<br />
-            <span className="italic-accent">vos cheveux,</span><br />
-            depuis Noisy.
+            Votre salon<br />
+            <span className="italic-accent">de coiffure</span><br />
+            à Noisy-le-Sec.
           </h1>
 
           {/* Sous-titre + CTAs */}
           <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <p className="max-w-md text-lg text-foreground/70 leading-relaxed">
-              {salonInfo.tagline} Coupes, couleurs et soins personnalisés
-              pour femmes, hommes et enfants.
+              Coupe, couleur, soin. Pour femmes, hommes et enfants.
+              Une équipe à l'écoute, des conseils sincères, et un bon café à l'arrivée.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -122,20 +122,20 @@ const Index = () => {
           <div>
             <p className="eyebrow mb-6">À propos du salon</p>
             <h2 className="font-serif font-light text-5xl md:text-6xl leading-tight mb-8">
-              Un salon <span className="italic-accent">accueillant</span>,<br />
-              une expertise <span className="italic-accent">reconnue.</span>
+              Une équipe <span className="italic-accent">gentille</span><br />
+              et <span className="italic-accent">à l'écoute.</span>
             </h2>
             <p className="text-foreground/75 text-lg leading-relaxed mb-6">
-              Au cœur de Noisy-le-Sec, Najma Coiffure réunit une équipe de coiffeurs
-              passionnés. Notre spécialité ? La coloration sur mesure et les soins
-              capillaires personnalisés, pour tous types de cheveux.
+              Najma Coiffure, c'est un salon de quartier à Noisy-le-Sec où on prend
+              le temps de discuter avant de couper. On vous demande ce que vous voulez,
+              on vous conseille, et on fait ce qui vous va vraiment.
             </p>
             <p className="text-foreground/75 text-lg leading-relaxed mb-10">
-              Femmes, hommes, enfants : chacun trouve son style dans une ambiance
-              chaleureuse et conviviale.
+              Femmes, hommes, enfants, tous les types de cheveux : on est là pour ça,
+              dans une ambiance simple et conviviale.
             </p>
             <Link to="/a-propos" className="link-underline text-primary font-medium uppercase tracking-[0.2em] text-sm">
-              Notre histoire →
+              En savoir plus →
             </Link>
           </div>
         </div>
@@ -148,8 +148,8 @@ const Index = () => {
             <div>
               <p className="eyebrow mb-4">Nos réalisations</p>
               <h2 className="font-serif font-light text-5xl md:text-6xl leading-tight max-w-2xl">
-                Quand la <span className="italic-accent">technique</span><br />
-                rencontre l'<span className="italic-accent">émotion</span>.
+                Quelques <span className="italic-accent">coupes</span><br />
+                faites au <span className="italic-accent">salon</span>.
               </h2>
             </div>
           </div>
@@ -230,10 +230,10 @@ const Index = () => {
       <section className="py-32 bg-cream">
         <div className="container-najma">
           <div className="text-center max-w-3xl mx-auto">
-            <p className="eyebrow mb-6">Envie de changer ?</p>
+            <p className="eyebrow mb-6">Un coup de fil suffit</p>
             <h2 className="font-serif font-light text-5xl md:text-7xl leading-[0.95] mb-10">
-              Réservez votre<br />
-              <span className="italic-accent">moment</span> chez Najma.
+              On vous prend <span className="italic-accent">rendez-vous</span><br />
+              quand vous voulez.
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <a

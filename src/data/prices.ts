@@ -1,8 +1,8 @@
 /* ============================================================
-   GRILLE DE PRIX NAJMA COIFFURE
-   Tarifs relevés sur la vitrine du salon (110 Bd Michelet,
-   Noisy-le-Sec). Prix "à partir de" — TTC.
-   ⚠️ Pour ajouter/modifier un service : éditer le tableau
+   GRILLE DE TARIFS — VERSION DÉMO
+   Tarifs indicatifs, à adapter selon le métier de l'artisan
+   (plomberie, électricité, garage, menuiserie, etc.).
+   ⚠️ Pour ajouter/modifier une prestation : éditer le tableau
    `items` de la catégorie correspondante ci-dessous.
    ============================================================ */
 
@@ -20,61 +20,48 @@ export type PriceCategory = {
 };
 
 export const priceCategories: PriceCategory[] = [
-  /* ---------- SIGNATURES (mises en avant en vitrine) ---------- */
+  /* ---------- INTERVENTIONS COURANTES ---------- */
   {
-    id: "signatures",
-    title: "Les incontournables",
-    subtitle: "Les tarifs phares affichés en vitrine",
+    id: "interventions",
+    title: "Interventions courantes",
+    subtitle: "Les prestations les plus demandées",
     items: [
-      { name: "Coupe + shampoing + brushing", price: "à partir de 13 €" },
-      { name: "Couleur", price: "à partir de 25 €" },
-      { name: "Mèche", price: "à partir de 30 €" },
-      { name: "Couleur + mèches", price: "à partir de 50 €" },
-      { name: "Lissage brésilien", price: "à partir de 60 €", description: "Selon longueur et densité" },
+      { name: "Déplacement + diagnostic", price: "à partir de 45 €", description: "Offert si travaux acceptés" },
+      { name: "Petite réparation", price: "à partir de 80 €", description: "Main d'œuvre, hors fournitures" },
+      { name: "Intervention standard", price: "à partir de 150 €" },
+      { name: "Devis détaillé sur site", price: "gratuit" },
     ],
   },
-  /* ---------- FEMMES ---------- */
+  /* ---------- DÉPANNAGE ---------- */
   {
-    id: "femmes",
-    title: "Femmes",
-    subtitle: "Coupes, brushings et mises en beauté",
+    id: "depannage",
+    title: "Dépannage",
+    subtitle: "Réactivité 7j/7 sur votre secteur",
     items: [
-      { name: "Coupe + shampoing + brushing", price: "à partir de 13 €" },
-      { name: "Brushing seul", price: "à partir de 10 €", description: "Selon longueur" },
-      { name: "Chignon / coiffure événement", price: "sur devis", description: "Mariage, soirée, henné" },
+      { name: "Dépannage en journée", price: "à partir de 90 €" },
+      { name: "Dépannage urgent (<2h)", price: "à partir de 120 €" },
+      { name: "Intervention week-end", price: "sur devis" },
     ],
   },
-  /* ---------- HOMMES ---------- */
+  /* ---------- TRAVAUX & POSE ---------- */
   {
-    id: "hommes",
-    title: "Hommes",
-    subtitle: "Coupes classiques et tendance",
+    id: "travaux",
+    title: "Travaux & pose",
+    subtitle: "Devis personnalisé sous 48h",
     items: [
-      { name: "Coupe homme", price: "à partir de 13 €", description: "Shampoing inclus" },
-      { name: "Coupe + barbe", price: "sur devis" },
-      { name: "Coupe enfant", price: "à partir de 10 €" },
+      { name: "Pose simple", price: "à partir de 200 €" },
+      { name: "Rénovation pièce complète", price: "sur devis" },
+      { name: "Mise aux normes", price: "sur devis", description: "Selon état de l'installation" },
     ],
   },
-  /* ---------- COULEUR (spécialité du salon) ---------- */
+  /* ---------- ENTRETIEN & MAINTENANCE ---------- */
   {
-    id: "couleur",
-    title: "Couleur & Coloration",
-    subtitle: "La spécialité de Najma Coiffure",
+    id: "entretien",
+    title: "Entretien & maintenance",
+    subtitle: "Pour préserver vos installations dans le temps",
     items: [
-      { name: "Couleur", price: "à partir de 25 €" },
-      { name: "Mèche", price: "à partir de 30 €" },
-      { name: "Couleur + mèches", price: "à partir de 50 €" },
-      { name: "Balayage", price: "sur devis", description: "Selon technique et longueur" },
-    ],
-  },
-  /* ---------- LISSAGE & SOINS ---------- */
-  {
-    id: "soins",
-    title: "Lissage & Soins",
-    subtitle: "Pour des cheveux disciplinés et en bonne santé",
-    items: [
-      { name: "Lissage brésilien", price: "à partir de 60 €", description: "Selon longueur et densité" },
-      { name: "Soin profond", price: "sur devis", description: "Masque réparateur en complément" },
+      { name: "Visite d'entretien annuelle", price: "à partir de 110 €" },
+      { name: "Contrat de maintenance", price: "sur devis", description: "Forfait annuel adapté à vos besoins" },
     ],
   },
 ];

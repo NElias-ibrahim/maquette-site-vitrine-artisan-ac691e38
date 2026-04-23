@@ -1,29 +1,28 @@
-import aboutDetail from "@/assets/about-detail.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Link } from "react-router-dom";
+import { salonInfo } from "@/data/salon";
 
 /* ============================================================
-   PAGE À PROPOS
-   Histoire du salon, valeurs, équipe.
-   Le contenu est éditable directement dans ce fichier.
+   PAGE À PROPOS — VERSION DÉMO ARTISAN
+   Histoire de l'entreprise, valeurs, équipe.
+   Tout le texte est éditable directement ici.
    ============================================================ */
 
 const valeurs = [
   {
     num: "01",
     title: "On écoute",
-    text: "On commence toujours par discuter : ce que vous voulez, ce qui vous plaît, ce qui vous va. Pas de coupe imposée.",
+    text: "On commence par comprendre votre besoin avant de proposer une solution. Pas de prestation imposée, juste ce qu'il vous faut.",
   },
   {
     num: "02",
-    title: "Tous les cheveux",
-    text: "Lisses, bouclés, frisés, crépus, fins, épais : on sait faire. Femmes, hommes, enfants, tout le monde est bienvenu.",
+    title: "Devis clair",
+    text: "Un devis détaillé, sans frais cachés. Vous savez exactement à quoi vous attendre avant le début des travaux.",
   },
   {
     num: "03",
-    title: "Des bons produits",
-    text: "On utilise des marques sérieuses (L'Oréal Pro, Olaplex, Kérastase) pour préserver la santé de vos cheveux.",
+    title: "Travail soigné",
+    text: "Matériel de qualité, finitions propres et chantier nettoyé en partant. C'est la base, on y tient.",
   },
 ];
 
@@ -36,15 +35,16 @@ const APropos = () => {
           <div className="md:col-span-7">
             <p className="eyebrow mb-6">Notre histoire</p>
             <h1 className="display-xl text-ink">
-              Le salon,<br />
+              L'entreprise,<br />
               en <span className="italic-accent">deux mots.</span>
             </h1>
           </div>
           <div className="md:col-span-5">
             <p className="text-lg text-foreground/75 leading-relaxed">
-              Najma Coiffure, c'est un salon de quartier à Noisy-le-Sec.
-              Une équipe sympa, à l'écoute, qui prend le temps de bien faire
-              les choses. Pas de chichi, juste du bon travail.
+              {salonInfo.name}, c'est un artisan de proximité installé à
+              {" "}{salonInfo.city}. Une équipe sérieuse, à l'écoute, qui prend
+              le temps de bien faire les choses. Pas de bla-bla, juste du
+              travail soigné.
             </p>
           </div>
         </div>
@@ -54,30 +54,23 @@ const APropos = () => {
       <section className="py-24">
         <div className="container-najma grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
-            <img
-              src={aboutDetail}
-              alt="Détail intérieur Najma Coiffure"
-              loading="lazy"
-              width={1200}
-              height={1500}
-              className="rounded-2xl shadow-warm w-full"
-            />
+            <ImagePlaceholder label="Photo de l'artisan ou de l'atelier" ratio="portrait" className="shadow-warm" />
           </div>
           <div className="md:col-span-7 md:pl-12">
-            <p className="eyebrow mb-4">L'esprit du salon</p>
+            <p className="eyebrow mb-4">L'esprit de la maison</p>
             <h2 className="font-serif font-light text-4xl md:text-5xl leading-tight mb-8">
-              Simple, <span className="italic-accent">sympa,</span><br />
-              et <span className="italic-accent">pro.</span>
+              Sérieux, <span className="italic-accent">honnête,</span><br />
+              et <span className="italic-accent">réactif.</span>
             </h2>
             <p className="text-foreground/75 text-lg leading-relaxed mb-5">
-              Chez Najma, on aime ce qu'on fait. On vous accueille bien, on discute,
-              on conseille. Et surtout, on fait la coupe ou la couleur que vous voulez,
-              pas celle qu'on a envie de faire.
+              On aime le travail bien fait. On vous accueille bien, on prend
+              le temps d'expliquer, et on fait ce qui doit être fait — pas
+              plus, pas moins.
             </p>
             <p className="text-foreground/75 text-lg leading-relaxed">
-              Notre truc, c'est la <strong>coloration</strong> : balayages, mèches,
-              couleurs naturelles ou plus marquées. Mais on est aussi à l'aise sur
-              une coupe homme rapide ou pour dompter des boucles compliquées.
+              Notre force, c'est la <strong>réactivité</strong> : un appel,
+              un rendez-vous rapide, un devis sous 48h. Et un suivi personnel
+              du début à la fin du chantier.
             </p>
           </div>
         </div>
@@ -108,20 +101,23 @@ const APropos = () => {
       <section className="py-24">
         <div className="container-najma">
           <div className="grid md:grid-cols-3 gap-6 mb-20">
-            <img src={gallery1} alt="Coloration" loading="lazy" width={900} height={1200}
-              className="rounded-2xl w-full h-72 object-cover" />
-            <img src={gallery3} alt="Cheveux frisés" loading="lazy" width={900} height={1200}
-              className="rounded-2xl w-full h-72 object-cover md:translate-y-12" />
-            <img src={aboutDetail} alt="Salon" loading="lazy" width={1200} height={1500}
-              className="rounded-2xl w-full h-72 object-cover" />
+            <div className="h-72">
+              <ImagePlaceholder label="Réalisation 1" className="h-full" />
+            </div>
+            <div className="h-72 md:translate-y-12">
+              <ImagePlaceholder label="Réalisation 2" className="h-full" />
+            </div>
+            <div className="h-72">
+              <ImagePlaceholder label="Réalisation 3" className="h-full" />
+            </div>
           </div>
 
           <blockquote className="max-w-4xl mx-auto text-center">
             <p className="font-serif font-light text-4xl md:text-5xl leading-tight italic">
-              « Un cheveu en bonne santé, ça passe avant tout le reste.
-              Le reste vient après. »
+              « Un travail bien fait, c'est un client tranquille.
+              Et un client tranquille, c'est ce qui fait tourner la maison. »
             </p>
-            <footer className="mt-8 eyebrow">— L'équipe Najma</footer>
+            <footer className="mt-8 eyebrow">— L'équipe</footer>
           </blockquote>
         </div>
       </section>
@@ -133,7 +129,7 @@ const APropos = () => {
             Envie de nous <span className="italic-accent">rencontrer</span> ?
           </h2>
           <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-warm transition">
-            Venir au salon
+            Nous contacter
           </Link>
         </div>
       </section>

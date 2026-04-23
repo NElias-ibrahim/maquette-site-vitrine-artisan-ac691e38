@@ -69,7 +69,7 @@ const Contact = () => {
                 className="font-serif text-2xl flex items-center gap-3 hover:text-primary transition"
               >
                 <Instagram className="w-5 h-5 text-primary" />
-                @najmacoiffure
+                @votrecompte
               </a>
             </div>
 
@@ -135,17 +135,17 @@ const Contact = () => {
                   required
                   rows={4}
                   className="w-full bg-transparent border-b border-foreground/30 py-3 focus:outline-none focus:border-primary transition resize-none placeholder:text-muted-foreground/50"
-                  placeholder="Votre demande, prestation souhaitée…"
+                  placeholder="Décrivez votre demande, le type d'intervention…"
                 />
               </div>
               <button
                 type="submit"
                 className="w-full mt-6 px-8 py-4 bg-ink text-cream rounded-full font-medium hover:bg-primary transition"
               >
-                Envoyer mon message
+                Envoyer ma demande
               </button>
               <p className="text-xs text-muted-foreground text-center">
-                Pour une réservation rapide, préférez l'appel téléphonique.
+                Pour une intervention urgente, préférez l'appel téléphonique.
               </p>
             </form>
           </div>
@@ -156,10 +156,10 @@ const Contact = () => {
       <section className="pb-24">
         <div className="container-najma">
           <div className="rounded-3xl overflow-hidden shadow-card border border-border">
-            {/* iframe Google Maps — adresse encodée dans l'URL */}
+            {/* iframe Google Maps — remplacer l'adresse pour personnaliser */}
             <iframe
-              title="Carte Najma Coiffure"
-              src="https://www.google.com/maps?q=110+Bd+Michelet+93130+Noisy-le-Sec&output=embed"
+              title="Localisation sur la carte"
+              src="https://www.google.com/maps?q=Paris&output=embed"
               width="100%"
               height="500"
               loading="lazy"

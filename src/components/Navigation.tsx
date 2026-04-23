@@ -49,7 +49,7 @@ export const Navigation = () => {
             <span className="italic-accent">.</span>
           </span>
           <span className="hidden sm:inline text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Coiffure
+            {salonInfo.trade}
           </span>
         </Link>
 

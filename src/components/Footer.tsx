@@ -13,7 +13,7 @@ export const Footer = () => {
       {/* Grand titre décoratif en arrière-plan */}
       <div className="absolute inset-x-0 -bottom-10 pointer-events-none opacity-[0.06] select-none">
         <div className="text-center font-serif font-light text-[20vw] leading-none">
-          Najma
+          {salonInfo.name.split(" ")[0]}
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export const Footer = () => {
               className="mt-4 inline-flex items-center gap-2 text-sm text-cream/70 hover:text-primary transition"
             >
               <Instagram className="w-4 h-4" />
-              @najmacoiffure
+              @votrecompte
             </a>
           </div>
 

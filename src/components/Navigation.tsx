@@ -1,67 +1,55 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { salonInfo } from "@/data/salon";
 
 /* ============================================================
-   NAVIGATION PRINCIPALE
-   Barre fixe en haut, transparente sur la home, opaque ailleurs.
-   Pour ajouter une page : ajoute une entrée dans le tableau `links`.
+   NAVIGATION — Style "Pro plombier"
+   Header bleu plein, logo à gauche, CTA téléphone à droite.
    ============================================================ */
 
 const links = [
   { to: "/", label: "Accueil" },
-  { to: "/prix", label: "Prix" },
+  { to: "/prix", label: "Prestations" },
   { to: "/avis", label: "Avis" },
   { to: "/a-propos", label: "À propos" },
   { to: "/contact", label: "Contact" },
 ];
 
 export const Navigation = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
 
-  // Détecte le scroll pour changer le style de la nav
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Ferme le menu mobile au changement de page
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
-  // Style dynamique : transparent sur home en haut, opaque sinon
-  const navBg = scrolled || !isHome
-    ? "bg-background/85 backdrop-blur-xl border-b border-border/50"
-    : "bg-transparent";
-
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${navBg}`}>
-      <div className="container-najma flex items-center justify-between py-5">
-        {/* Logo / Nom du salon */}
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="font-serif text-2xl font-light tracking-tight">
-            {salonInfo.name.split(" ")[0]}
-            <span className="italic-accent">.</span>
-          </span>
-          <span className="hidden sm:inline text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            {salonInfo.trade}
-          </span>
+    <header className="sticky top-0 inset-x-0 z-50 bg-primary text-primary-foreground shadow-md">
+      <div className="container-najma flex items-center justify-between py-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-lg bg-primary-foreground text-primary flex items-center justify-center font-bold text-lg shadow-sm">
+            {salonInfo.name.charAt(0)}
+          </div>
+          <div className="leading-tight">
+            <div className="font-bold text-base sm:text-lg">{salonInfo.name}</div>
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-primary-foreground/80">
+              {salonInfo.trade}
+            </div>
+          </div>
         </Link>
 
         {/* Liens desktop */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-2">
           {links.map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
+              end={l.to === "/"}
               className={({ isActive }) =>
-                `text-sm uppercase tracking-[0.2em] link-underline transition-colors ${
-                  isActive ? "text-primary" : "text-foreground/80 hover:text-foreground"
+                `px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  isActive
+                    ? "bg-accent text-accent-foreground"
+                    : "text-primary-foreground/90 hover:bg-primary-foreground/10"
                 }`
               }
             >
@@ -70,12 +58,13 @@ export const Navigation = () => {
           ))}
         </nav>
 
-        {/* CTA desktop */}
+        {/* CTA Téléphone desktop */}
         <a
           href={`tel:${salonInfo.phone.replace(/\s/g, "")}`}
-          className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-primary/90 transition-all hover:shadow-warm"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground text-primary rounded-full text-sm font-semibold hover:shadow-lg transition-all"
         >
-          Réserver
+          <Phone className="w-4 h-4" />
+          {salonInfo.phone}
         </a>
 
         {/* Bouton menu mobile */}
@@ -90,14 +79,17 @@ export const Navigation = () => {
 
       {/* Menu mobile déroulant */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border animate-fade-in">
-          <nav className="container-najma py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-accent border-t border-primary-foreground/10 animate-fade-in">
+          <nav className="container-najma py-6 flex flex-col gap-2">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
+                end={l.to === "/"}
                 className={({ isActive }) =>
-                  `text-lg font-serif ${isActive ? "text-primary italic" : "text-foreground"}`
+                  `px-4 py-3 rounded-lg text-base font-medium ${
+                    isActive ? "bg-primary text-primary-foreground" : "text-primary-foreground hover:bg-primary-foreground/10"
+                  }`
                 }
               >
                 {l.label}
@@ -105,9 +97,10 @@ export const Navigation = () => {
             ))}
             <a
               href={`tel:${salonInfo.phone.replace(/\s/g, "")}`}
-              className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground rounded-full font-medium"
+              className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary-foreground text-primary rounded-full font-semibold"
             >
-              Réserver — {salonInfo.phone}
+              <Phone className="w-4 h-4" />
+              {salonInfo.phone}
             </a>
           </nav>
         </div>

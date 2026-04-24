@@ -11,10 +11,10 @@ const Prix = () => {
   return (
     <>
       {/* Hero de page */}
-      <section className="pt-40 pb-20 bg-cream">
+      <section className="pt-40 pb-20 bg-secondary">
         <div className="container-najma">
           <p className="eyebrow mb-6 animate-fade-in">Tarifs 2025</p>
-          <h1 className="display-xl text-ink animate-fade-up">
+          <h1 className="display-xl text-foreground animate-fade-up">
             Nos <span className="italic-accent">prix.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-foreground/70 animate-fade-up" style={{ animationDelay: "0.1s" }}>
@@ -34,10 +34,10 @@ const Prix = () => {
               <div className="md:col-span-4">
                 <div className="md:sticky md:top-32">
                   <p className="eyebrow text-primary mb-3">0{idx + 1}</p>
-                  <h2 className="font-serif font-light text-4xl md:text-5xl leading-tight mb-3">
+                  <h2 className="font-medium text-4xl md:text-5xl leading-tight mb-3">
                     {cat.title}
                   </h2>
-                  <p className="text-muted-foreground italic font-serif">{cat.subtitle}</p>
+                  <p className="text-muted-foreground italic font-medium">{cat.subtitle}</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ const Prix = () => {
                       </div>
                       {/* Pointillés décoratifs */}
                       <div className="hidden sm:block flex-1 border-b border-dotted border-foreground/20 mb-1.5" />
-                      <p className="font-serif text-xl text-primary font-medium whitespace-nowrap">
+                      <p className="font-medium text-xl text-primary font-medium whitespace-nowrap">
                         {item.price}
                       </p>
                     </li>
@@ -67,12 +67,12 @@ const Prix = () => {
       </section>
 
       {/* CTA bas de page */}
-      <section className="py-24 bg-ink text-cream">
+      <section className="py-24 bg-accent text-secondary-foreground">
         <div className="container-najma text-center">
-          <h2 className="font-serif font-light text-4xl md:text-5xl mb-6">
+          <h2 className="font-medium text-4xl md:text-5xl mb-6">
             Une <span className="italic-accent">question</span> sur un tarif ?
           </h2>
-          <p className="text-cream/70 mb-10 max-w-xl mx-auto">
+          <p className="text-secondary-foreground/70 mb-10 max-w-xl mx-auto">
             Appelez-nous, on vous répond et on vous fait une estimation adaptée à votre chantier.
           </p>
           <Link

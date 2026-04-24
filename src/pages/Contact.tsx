@@ -18,10 +18,10 @@ const Contact = () => {
   return (
     <>
       {/* HERO */}
-      <section className="pt-40 pb-16 bg-cream">
+      <section className="pt-40 pb-16 bg-secondary">
         <div className="container-najma">
           <p className="eyebrow mb-6">Nous appeler, nous trouver</p>
-          <h1 className="display-xl text-ink">
+          <h1 className="display-xl text-foreground">
             On vous<br />
             <span className="italic-accent">attend.</span>
           </h1>
@@ -35,7 +35,7 @@ const Contact = () => {
           <div className="space-y-12">
             <div>
               <p className="eyebrow mb-4">Adresse</p>
-              <p className="font-serif text-2xl flex items-start gap-3">
+              <p className="font-medium text-2xl flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-2 text-primary shrink-0" />
                 <span>{salonInfo.address}<br />{salonInfo.postalCode} {salonInfo.city}</span>
               </p>
@@ -53,7 +53,7 @@ const Contact = () => {
               <p className="eyebrow mb-4">Téléphone</p>
               <a
                 href={`tel:${salonInfo.phone.replace(/\s/g, "")}`}
-                className="font-serif text-2xl flex items-center gap-3 hover:text-primary transition"
+                className="font-medium text-2xl flex items-center gap-3 hover:text-primary transition"
               >
                 <Phone className="w-5 h-5 text-primary" />
                 {salonInfo.phone}
@@ -66,7 +66,7 @@ const Contact = () => {
                 href={salonInfo.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-2xl flex items-center gap-3 hover:text-primary transition"
+                className="font-medium text-2xl flex items-center gap-3 hover:text-primary transition"
               >
                 <Instagram className="w-5 h-5 text-primary" />
                 @votrecompte
@@ -84,7 +84,7 @@ const Contact = () => {
                     key={h.day}
                     className="flex justify-between items-center py-3 border-b border-border"
                   >
-                    <span className={`font-serif text-lg ${h.closed ? "text-muted-foreground" : ""}`}>
+                    <span className={`font-medium text-lg ${h.closed ? "text-muted-foreground" : ""}`}>
                       {h.day}
                     </span>
                     <span className={`text-sm ${h.closed ? "text-muted-foreground italic" : "font-medium"}`}>
@@ -97,9 +97,9 @@ const Contact = () => {
           </div>
 
           {/* Formulaire */}
-          <div className="bg-cream rounded-3xl p-10 h-fit md:sticky md:top-32">
+          <div className="bg-secondary rounded-3xl p-10 h-fit md:sticky md:top-32">
             <p className="eyebrow mb-3">Une question ?</p>
-            <h2 className="font-serif font-light text-3xl mb-8">
+            <h2 className="font-medium text-3xl mb-8">
               Écrivez-nous,<br />
               <span className="italic-accent">on vous répond vite.</span>
             </h2>
@@ -140,7 +140,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full mt-6 px-8 py-4 bg-ink text-cream rounded-full font-medium hover:bg-primary transition"
+                className="w-full mt-6 px-8 py-4 bg-accent text-secondary-foreground rounded-full font-medium hover:bg-primary transition"
               >
                 Envoyer ma demande
               </button>

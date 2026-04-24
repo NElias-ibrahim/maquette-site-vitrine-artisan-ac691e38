@@ -34,10 +34,10 @@ const Avis = () => {
   return (
     <>
       {/* HERO + STATS */}
-      <section className="pt-40 pb-16 bg-cream">
+      <section className="pt-40 pb-16 bg-secondary">
         <div className="container-najma">
           <p className="eyebrow mb-6">Avis Google vérifiés</p>
-          <h1 className="display-xl text-ink mb-12">
+          <h1 className="display-xl text-foreground mb-12">
             Vos <span className="italic-accent">retours.</span>
           </h1>
 
@@ -45,7 +45,7 @@ const Avis = () => {
             {/* Note moyenne */}
             <div>
               <div className="flex items-baseline gap-4 mb-3">
-                <span className="font-serif text-8xl font-light text-primary">{avgRating}</span>
+                <span className="font-medium text-8xl font-light text-primary">{avgRating}</span>
                 <span className="text-2xl text-muted-foreground">/5</span>
               </div>
               <div className="flex gap-1 mb-3">
@@ -111,7 +111,7 @@ const Avis = () => {
                 </div>
 
                 {/* Texte */}
-                <p className="font-serif text-lg leading-relaxed mb-6 italic">
+                <p className="font-medium text-lg leading-relaxed mb-6 italic">
                   « {r.text} »
                 </p>
 
@@ -141,7 +141,7 @@ const Avis = () => {
             <div className="text-center mt-16">
               <button
                 onClick={() => setVisibleCount(visibleCount + PAGE_SIZE)}
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-ink text-cream rounded-full font-medium hover:bg-primary transition-all"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-secondary-foreground rounded-full font-medium hover:bg-primary transition-all"
               >
                 Voir plus d'avis
                 <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
@@ -150,8 +150,8 @@ const Avis = () => {
           )}
 
           {/* CTA Google */}
-          <div className="mt-20 text-center p-12 bg-cream rounded-3xl">
-            <p className="font-serif text-3xl mb-4">
+          <div className="mt-20 text-center p-12 bg-secondary rounded-3xl">
+            <p className="font-medium text-3xl mb-4">
               Vous êtes venu ? <span className="italic-accent">Partagez votre avis.</span>
             </p>
             <p className="text-muted-foreground mb-8 max-w-md mx-auto">
